@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Langtons Ant</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.min.js"></script>
+    <script src="langant.js"></script>
+    <style>
+      html {
+        background-color: #F2F2F2;
+      }
+
+      #main .wrapper {
+        width: 700px;
+        border-radius: 20px;
+        background-color: white;
+        padding: 15px;
+        box-shadow: 0px 0px 10px black;
+      }
+
+      h5 {
+        margin-top: -25px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main" align="center">
+      <div class="wrapper">
+        <h1>Langtons Ant</h1>
+        <h5>By Eclip5e</h5>
+        <hr><br><br>
+        <div id="cell_canvas"></div><br>
+        Step: <span id="genDisp">0</span><br>
+        Current Code: <div id="codeDisp"></div><br><br>
+        Dimensions:  <input type="text" placeholder="Enter new Height" id="inputDim"><br>
+        <button onclick="changeDim();">Change</button>
+        <hr>
+        <button onclick="gridStart();">Start / Pause</button> <button onclick="gridClear();">Clear</button><br><br>
+        Code:  <input type="text" placeholder="Enter new Code" id="inputCode"> <button onclick="applyCode();">Apply</button><br>
+        Tick Speed:  <input type="text" placeholder="Enter Tick Speed" id="inputSpeed" oninput="changeSpeed();"><br>
+        <br><h2><div id="msgService"></div></h2>
+      </div>
+      <input id="inputImport" type="file" name="name" style="display:none;">
+      <input id="GRID_STORE" type="text" name="GRID_STORE" style="display:none;">
+    </div>
+  </body>
+</html>
